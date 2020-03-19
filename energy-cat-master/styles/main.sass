@@ -1,0 +1,1314 @@
+//@import "global/fonts.sass"
+@import "variables.sass"
+@import "mixins.sass"
+@import "global/page.sass"
+
+
+
+
+/////ВЕРХНЕЕ МЕНЮ\\\\\
+a
+	text-decoration: none
+	color: black
+.fa-bars
+	transform: scale(1.4)
+
+.switcher
+	position: absolute
+	visibility: hidden
+	left: -99999px
+
+.open,
+.close
+	display: none
+
+	@media (max-width: $phone-max)
+		display: block
+
+
+@media (max-width: $phone-max)
+
+	.switcher:checked ~ .promo__ul
+		background: green
+		position: fixed
+		right: 0
+		width: 100%
+		//height: 300px
+		background: white
+		justify-content: space-between
+		align-items: center
+		z-index: 2
+		top: 65px
+
+		li
+			text-align: center
+			padding: 20px 0
+			font-size: 20px
+			font-weight: 500
+			line-height: 20px
+			text-transform: uppercase
+			border-bottom: 1px solid #e6e6e6
+			width: 100%
+			&:nth-child(1)
+				border-top: 1px solid #e6e6e6
+
+	.promo__ul
+		position: fixed
+		right: -100%
+
+
+
+	
+/////ВЕРХНЕЕ МЕНЮ\\\\\
+
+
+
+
+.header
+	display: flex
+	justify-content: flex-start
+	margin-left: 100px
+
+	@media (max-width: $phone-max)
+		flex-wrap: wrap
+		margin-left: 35px
+		margin-top: -50px
+
+
+
+
+	@media (max-width: $tablet-max)
+		margin: 0
+		flex-direction: column
+
+	@media (max-width: $phone-max)
+		justify-content: center
+		margin: 0
+		padding: 0
+		margin-bottom: 70px
+
+
+.promo
+	//display: flex
+	//margin: 0 auto
+	@media (max-width: $phone-max)
+		margin-bottom: 70px
+
+	@media (max-width: $tablet-max)
+		//width: 768px
+		margin: 0 auto
+
+
+
+
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		background: url(../images/bg-right.jpg) no-repeat right
+		background-color: #64a83b
+		height: 696px
+		width: calc(100%/2)
+		z-index: -2
+		@media (max-width: $phone-max)
+			display: none
+
+		@media (max-width: $tablet-max)
+			display: none
+
+	&__nav
+		width: $desktop
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-left: auto
+		margin-right: auto
+		padding-top: 55px
+		line-height:40px
+		&__link-active
+			
+			border-bottom: 2px solid white
+		ul
+			a
+				color: rgba(255, 255, 255, 1)
+				&__link-active
+					border-bottom: 1px solid white
+
+				&:hover
+					color: rgba(255, 255, 255, 0.5)
+
+
+		
+		@media (max-width: $tablet-max)
+			width: 90%
+			padding-top: 24px
+			&__link-active
+
+				border-bottom: 2px solid #68b738
+			ul
+
+				font-size: 18px
+				font-weight: 400
+				line-height: 24.86px
+				text-transform: uppercase
+				line-height:40px
+				a
+					color: black
+					&:hover
+						color: rgba(0, 0, 0, 0.5)
+
+
+		@media (max-width: $phone-max)
+			//display: none
+			//padding: 0
+			justify-content: space-between
+			padding: 0 24px 0 24px
+			margin-left: 0
+			margin-right: 0
+			width: 100%
+			height: 65px
+
+			
+			ul
+				flex-direction: column
+				color: black
+
+		
+
+
+
+	&__logo
+		background: url(../images/logo.png)
+		width: 202px
+		height: 59px
+		margin-right: auto
+		margin-left: 10px
+		@media (max-width: $tablet-max)
+			background: url(../images/logo-tablet.png) 
+			width: 173px
+			height: 58px
+		@media (max-width: $phone-max)
+			//display: none
+			background: url(../images/logo-mobile-header.png) no-repeat
+			width: 101px
+			height: 18px
+			margin-right: 18px
+
+			&__mobile
+
+				width: 33px
+				height: 38px
+				background: url(../images/logo-mobile.png) no-repeat
+
+
+	&__ul
+		display: flex
+		font-size: 20px
+		font-weight: 400
+		text-transform: uppercase
+		color: white
+
+		@media (max-width: $phone-max)
+			font-size: 18px
+
+		@media (max-width: $tablet-max)
+			color: black
+
+		& li
+			margin: 0 15px
+
+	&__left
+
+		@media (max-width: $tablet-max)
+			align-self: center
+		& img
+			margin-top: 54px
+		&__btn
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 245px
+			height: 52px
+			background-color: #68b738
+			font-size: 20px
+			font-weight: 400
+			line-height: 20px
+			text-transform: uppercase
+			color: #ffffff
+
+			@media (max-width: $phone-max)
+				position: absolute
+				top: 540px
+				left: 5%
+				width: 90%
+				height: 40px
+				//margin: 0 100px
+				font-size: 14px
+				font-weight: 400
+				line-height: 18px
+				text-transform: uppercase
+
+
+		&__info
+			display: flex
+			margin-top: -100px
+			margin-left: 83px
+			height: 696px
+			flex-direction: column
+			justify-content: center
+			
+			@media (max-width: $phone-max)
+				color: white
+
+			@media (max-width: $tablet-max)
+				justify-content: flex-start
+				margin-top: 50px
+				height: 300px
+				//height: 200px
+
+			h1
+				font-size: 60px
+				font-weight: 400
+				line-height: 60px
+				width: 500px
+				@media (min-width: $phone) and (max-width: $tablet)
+					width: auto
+					margin-top: 18px
+					padding: 0 20px
+			h2
+				margin-top: 33px
+				margin-bottom: 53px
+				font-size: 20px
+				font-weight: 400
+				line-height: 20px
+				text-transform: uppercase
+			@media (max-width: $phone-max)
+				margin: 0
+				width: 100%
+				height: 305px
+				background: url(../images/index-background-mobile.png) no-repeat center
+				//background-size: cover
+				background-color: #63a73a
+				align-items: center
+
+		@media (max-width: $phone-max)
+			height: 0
+
+		@media (max-width: $phone-max)
+			color: black
+			width: 100%
+			//margin: 0 0 350px 0
+			padding: 0
+			display: flex
+			text-align: center
+
+			h1
+				font-size: 36px
+				font-weight: 400
+				line-height: 36px
+			h2
+				margin-top: 33px
+				margin-bottom: 53px
+				font-size: 20px
+				font-weight: 400
+				line-height: 20px
+				text-transform: uppercase
+
+		
+
+
+	&__right
+		@media (min-width: $desktop)
+			padding-top: 50px
+			margin-left: -100px
+		@media (max-width: $tablet-max)
+			align-self: center
+
+		&__img
+			//position: absolute
+			margin-top: 90px
+			margin-left: -40px
+
+
+		@media (max-width: $phone-max)
+			margin-top: $phone-max
+			//margin-left: 50px
+			z-index: -1
+
+
+
+
+		@media (max-width: $tablet-max)
+			z-index: -1
+			margin-top: -100px
+
+		@media (min-width: $phone) and (max-width: $phone-max)
+			//display: none
+			margin-top: 200px
+			z-index: 1
+
+
+
+				
+
+
+
+=circle-green
+	width: 96px
+	height: 96px
+	border: 3px solid #68b738
+	border-radius: 50%
+	background-color: #68b738
+
+=circle-green--tablet
+	width: 200px
+	height: 200px
+	//border: 3px solid #68b738
+	border-radius: 50%
+	background-color: #68b738
+
+=circle-green-mobile
+	width: 50px
+	height: 50px
+	//border: 3px solid #68b738
+	border-radius: 50%
+	background-color: #68b738
+
+#offers__button
+	&--arrow
+		&--left
+			top: -3px
+			position: relative
+		&--right
+			top: -3px
+			left: 10px
+			position: relative
+		@media (max-width: $phone-max)
+			&--left
+				top: -2px
+				left: 4px
+				position: relative
+				transform: scale(0.8)
+			&--right
+				top: -2px
+				left: 4px
+				position: relative
+				transform: scale(0.8)
+
+	&--tablet
+		&--left
+			top: -3px
+			left: 15px
+			position: relative
+		&--right
+			top: -3px
+			left: 15px
+			position: relative
+
+
+
+
+.offers
+	display: flex
+	justify-content: center
+	//margin-left: 100px
+	//margin-right: 100px
+	margin-top: 60px
+	padding-left: 72px
+	padding-right: 72px
+
+			
+
+	&__line
+		margin: auto
+		//margin-top: 15px
+		margin-bottom: 20px
+		width: 100%
+		border: 1px solid #dadada
+
+		@media (min-width: $phone-max)
+			display: none
+
+
+
+	&__button
+		font-size: 20px
+		font-weight: 400
+		line-height: 20px
+		margin-top: 30px
+		margin-bottom: 50px
+		padding-left: 50px
+		text-transform: uppercase
+
+
+		@media (max-width: $phone-max)
+			padding: 0
+			margin: 0 20px 20px 20px
+			font-size: 16px
+			font-weight: 400
+			line-height: 16px
+			text-transform: uppercase
+
+		@media (max-width: $tablet-max)
+			padding-left: 0
+
+
+
+	@media (max-width: $phone-max)
+		margin: 0
+		flex-wrap: wrap
+		padding: 0
+
+
+	@media (max-width: $tablet-max)
+		flex-direction: column
+		margin: 0
+		align-items: center
+
+
+
+
+		
+	&__left
+		display: flex
+		flex-direction: column
+		width: 610px
+		max-height: 372px
+		background: #f2f2f2
+		margin-right: 80px
+
+		@media (max-width: $phone-max)
+			margin: 0
+			//margin-top: 70px
+			width: 90%
+			max-height: 260px
+
+		&--tablet
+			display: none
+
+		@media (min-width: $phone-max) and (max-width: $tablet-max)
+			display: none
+			&--tablet
+				display: flex
+				width: 708px
+				height: 372px
+				background: #f2f2f2
+				margin-bottom: 30px
+				&__text
+					display: flex
+					flex-direction: column
+					justify-content: center
+					padding-left: 50px
+					h1
+						font-size: 36px
+						font-weight: 400
+						text-transform: uppercase
+					p
+						//margin-left: 50px
+						margin-right: 50px
+						margin-top: 25px
+						color: #444444
+						font-size: 16px
+						font-weight: 400
+						line-height: 24px
+				img
+					position: absolute
+					left: 30px
+					bottom: 20px
+		
+		&__image
+			+circle-green
+			position: relative
+			margin-left: 50px
+			margin-top: 50px
+
+			@media (max-width: $phone-max)
+				+circle-green-mobile
+				margin-top: 22px
+				margin-left: 20px
+
+			&--tablet
+				align-self: center
+				+circle-green--tablet
+				position: relative
+				margin-right: 60px
+				flex-shrink: 0
+
+
+		img
+			position: absolute
+			left: 12px
+			bottom: 5px
+			@media (max-width: $phone-max)
+				transform: scale(0.5)
+				left: -12px
+				top: -30px
+
+
+		h1
+			margin-left: 160px
+			margin-top: 15px
+			font-size: 36px
+			font-weight: 400
+			text-transform: uppercase
+		p
+			margin-left: 50px
+			margin-right: 50px
+			margin-top: 40px
+			color: #444444
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+
+		@media (max-width: $phone-max)
+			h1
+				margin: 0 0 0 70px
+				font-size: 24px
+				font-weight: 400
+				line-height: 37.02px
+				text-transform: uppercase
+			p
+				margin: 28px 20px 20px 20px
+				//width: 100%
+
+				font-size: 14px
+				font-weight: 400
+				line-height: 18px
+				text-align: left
+
+
+	&__right
+		width: 610px
+		max-height: 372px
+		background: #f2f2f2
+
+		@media (max-width: $phone-max)
+			margin: 0
+			margin-top: 20px
+			width: 90%
+			max-height: 260px
+			//background: green
+
+
+		&--tablet
+			display: none
+
+		@media (min-width: $phone-max) and (max-width: $tablet-max)
+			display: none
+			&--tablet
+				display: flex
+				width: 708px
+				height: 372px
+				background: #f2f2f2
+				&__text
+					display: flex
+					flex-direction: column
+					justify-content: center
+					padding-left: 50px
+					h1
+						font-size: 36px
+						font-weight: 400
+						text-transform: uppercase
+					p
+						//margin-left: 50px
+						margin-right: 50px
+						margin-top: 25px
+						color: #444444
+						font-size: 16px
+						font-weight: 400
+						line-height: 24px
+				img
+					position: absolute
+					left: -35px
+					top: 40px
+		
+		&__image
+			+circle-green
+			position: relative
+			margin-left: 50px
+			margin-top: 50px
+
+			@media (max-width: $phone-max)
+				+circle-green-mobile
+				margin-top: 22px
+				margin-left: 20px
+
+			&--tablet
+				align-self: center
+				+circle-green--tablet
+				position: relative
+				margin-right: 60px
+				flex-shrink: 0
+
+		img
+			position: absolute
+			left: -20px
+			bottom: 20px
+			@media (max-width: $phone-max)
+				transform: scale(0.5)
+				top: -7px
+				left: -46px
+
+		h1
+			margin-left: 160px
+			margin-top: 15px
+			font-size: 36px
+			font-weight: 400
+			text-transform: uppercase
+
+		p
+			margin-left: 50px
+			margin-right: 50px
+			margin-top: 40px
+			color: #444444
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+
+		@media (max-width: $phone-max)
+			h1
+				margin: 0 0 0 70px
+				font-size: 24px
+				font-weight: 400
+				line-height: 37.02px
+				text-transform: uppercase
+			p
+				margin: 28px 20px 20px 20px
+				//width: 100%
+				font-size: 14px
+				font-weight: 400
+				line-height: 18px
+				text-align: left
+
+.how-to-work
+	margin-top: 80px
+	//width: 90%
+	//margin: 0 auto
+
+
+	> h1
+		
+		font-size: 60px
+		font-weight: 400
+		line-height: 60px
+		color: #111111
+		margin-top: -10px
+
+		margin-left: auto
+		margin-right: auto
+
+		@media (min-width: $desktop)
+			width: $desktop-max-width
+			padding: 0 50px
+
+		@media (min-width: $tablet) and (max-width: $desktop)
+			width: $tablet-max-width
+			padding-left: $tablet-padding
+			font-size: 60px
+
+		@media (max-width: $tablet-max)
+			//font-size: 36px
+			font-weight: 400
+			line-height: 60px
+
+		@media (min-width: $phone) and (max-width: $phone-max)
+			font-size: 36px
+
+
+
+	@media (max-width: $phone-max)
+		margin-top: 20px
+		font-size: 36px
+		font-weight: 400
+		line-height: 60px
+		//margin-left: 30px
+		padding-left: 29px
+		padding-right: 29px
+
+
+	@media (max-width: $tablet-max)
+		h1
+			//width: $tablet-max-width
+			margin-top: 40px
+			//text-align: center
+
+
+			
+.roadmap
+	display: flex
+	margin-top: 63px
+	margin-left: auto
+	margin-right: auto
+	justify-content: space-between
+	
+	@media (max-width: $phone-max)
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		justify-content: flex-start
+		margin: 35px 0 0 0
+		width: 100%
+
+
+	@media (min-width: $tablet) and (max-width: $desktop)
+		width: $tablet-max-width
+		margin-left: auto
+		margin-right: auto
+		flex-wrap: wrap
+		justify-content: center
+
+	@media (min-width: $desktop)
+		width: $desktop-max-width
+		padding: 0 50px
+
+
+	p
+		color: #444444
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		margin-top: 37px
+
+		@media (max-width: $phone-max)
+			margin-top: 0
+			margin-left: 20px
+			font-size: 14px
+			font-weight: 400
+			line-height: 18px
+
+	&__infoblock
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		background-color: #68b738
+		&__img
+
+		@media (max-width: $phone-max)
+			flex-shrink: 0
+			transform: scale(1)
+			width: 60px
+			height: 60px
+
+
+
+
+
+	
+	&__section
+		position: relative
+		width: 236px
+		height: 228px
+		//flex-basis: 20%
+		//&:nth-child(-n+3)
+			//margin-right: 50px
+		h1
+			position: absolute
+			color: #f2f2f2
+			font-size: 281px
+			font-weight: 400
+			margin-left: 126px
+			z-index: -1
+			top: -109px
+
+		@media (max-width: $phone-max)
+			display: flex
+			flex-shrink: 0
+			height: 50px
+			width: 100%
+			align-items: center
+			margin-bottom: 30px
+			h1
+				display: none
+
+		
+		@media (max-width: $tablet-max)
+			&:nth-child(odd)
+				margin-right: 230px
+		
+			&:nth-child(1n)
+				margin-bottom: 90px
+
+			h1
+				margin-top: -10px
+
+.liveview
+	background-image: linear-gradient(180deg, white 170px, #f2f2f2 30%)
+	
+
+
+	&__block
+		display: flex
+		justify-content: center
+		//padding-left: 7%
+		//padding-right: 7%
+		margin-top: 40px
+		padding-bottom: 70px
+
+		@media (min-width: $desktop)
+			width: $desktop
+			margin: 0 auto
+			margin-top: 50px
+			padding-left: 50px
+			padding-right: 50px
+			
+		@media (max-width: $phone-max)
+			flex-direction: column
+			background: #f2f2f2 
+			margin-top: 20px
+
+			&__line
+				display: none
+
+		@media (max-width: $tablet-max)
+			flex-direction: column
+			margin-top: 0
+			//justify-content: center
+			align-items: center
+			
+			&__line
+				margin: auto
+				//margin-top: 15px
+				margin-bottom: 20px
+				width: 100%
+				border: 1px solid #dadada
+		
+
+
+
+		// .liveview__left
+		&__left
+			margin-right: 130px
+			flex-grow: 1
+
+			
+			@media (max-width: $phone-max)
+				flex-wrap: wrap
+				margin: 0 20px
+
+			@media (max-width: $tablet-max)
+				width: 90%
+				
+				margin: 0 auto
+
+
+
+			h1
+				color: #111111
+				font-size: 60px
+				font-weight: 400
+				line-height: 60px
+				margin-top: 30px
+				margin-bottom: 145px
+
+				@media (max-width: $phone-max)
+					padding: 0 calc(50% - 500px)
+					font-size: 36px
+					font-weight: 400
+					line-height: 60px
+					margin-top: 20px
+					margin-bottom: 30px
+
+				@media (max-width: $tablet-max)
+					padding-bottom: 60px
+				
+			p
+				width: 430px	
+				color: #444444
+				font-size: 16px
+				line-height: 24px
+
+				@media (max-width: $desktop)
+					width: 100%
+
+				@media (max-width: $phone-max)
+					font-size: 14px
+					font-weight: 400
+					line-height: 18px
+
+
+
+			@media (max-width: $tablet-max)
+				h1
+					margin-bottom: 10px
+
+
+
+
+		// .liveview__info
+		&__info
+
+			display: flex
+			margin-top: 70px
+			justify-content: center
+			padding: 0 20px
+			
+
+
+			
+			@media (max-width: $phone-max)
+				//flex-wrap: wrap
+				margin-top: 30px
+				margin-bottom: 30px
+
+			@media (max-width: $tablet-max)
+				margin-bottom: 50px
+
+			@media (min-width: $desktop)
+				padding-left: 0
+				justify-content: flex-start
+				
+
+
+
+			fieldset
+				border-radius: 6px
+				text-align: center
+				vertical-align: center
+				position: relative
+				height: 72px
+				width: 162px
+				font-size: 30px
+				font-weight: 400
+				line-height: 37.02px
+				text-transform: uppercase
+
+				@media (max-width: $phone-max)
+					width: auto
+					//flex-basis:100%
+
+
+			legend
+				position: absolute
+				width: 60%
+				bottom: 0
+				left: 50%
+				transform: translate(-50%,44%)
+				//padding: 0 3px
+				background: #f2f2f2
+				color: #444444
+				font-size: 14px
+				font-weight: 400
+				text-transform: lowercase
+
+				@media (max-width: $phone-max)
+					font-size: 14px
+					font-weight: 400
+					line-height: 12px
+
+				@media (max-width: $tablet-max)
+					width: 90%
+
+				@media (min-width: $desktop)
+					width: 80%
+
+
+
+
+
+			span
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-top: 14px
+
+				@media (max-width: $phone-max)
+					font-size: 24px
+					font-weight: 400
+					line-height: 24px
+					text-transform: uppercase
+
+				
+		// .liveview__info__1
+		&__info__1
+			margin-right: 40px
+
+			@media (max-width: $phone-max)
+				margin-right: 30px
+				width: 50%
+				flex-shrink: 0
+
+			&__span
+				margin-top: 60px
+				color: #111111
+				text-align: center
+				font-size: 19px
+				font-weight: 400
+				line-height: 20px
+				text-transform: uppercase
+
+				@media (max-width: 996px)
+					display: none
+
+
+
+
+
+
+				
+				&--mobile
+					display: none
+
+					@media (max-width: 996px)
+						display: none
+						margin-left: auto
+						display: flex
+						flex-direction: column
+						justify-content: center
+						color: #111111
+						font-size: 19px
+						font-weight: 400
+						line-height: 20px
+						text-transform: uppercase
+						text-align: right
+						margin-bottom: 10px
+					@media (max-width: $phone-max)
+						display: none
+
+				&--mobile-2
+					text-align: center
+					margin-bottom: 44px
+
+					@media (min-width: $phone-max)
+						display: none
+
+
+		// .liveview__info__2
+		&__info__2
+			//margin-left: 40px
+			@media (max-width: $phone-max)
+				width: 50%
+				flex-shrink: 0
+			legend
+				//width: 123px
+
+
+
+		// .liveview__right
+		&__right
+			height: 499px
+			width: 677px
+			background: url(../images/before-desktop.png)
+
+			@media (max-width: 992px)
+				display: flex
+				align-self: center
+
+			@media (max-width: $phone-max)
+				width: 311px
+				height: 232px
+				background-size: cover
+
+
+
+
+
+
+.footer
+
+	@media (min-width: 992px)
+		display: flex
+		position: relative
+	@media (max-width: $phone-max)
+		&__line
+			margin: auto
+			//margin-top: 15px
+			//margin-bottom: 20px
+			width: 90%
+			border: 1px solid #dadada
+
+
+
+
+	&__google-map
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 400px
+		width: 100%
+		//background: url(../images/map.jpg)
+
+		@media (max-width: $phone-max)
+			height: 360px
+
+		
+	&__map-pin
+		height: 113px
+		//width: 106px
+
+	&__info
+		display: flex
+		align-items: center
+		height: 150px
+		background: #f2f2f2
+
+		@media (max-width: $phone-max)
+			//flex-wrap: wrap
+			flex-direction: column
+			height: 236px
+
+		&__logo
+			background: url(../images/footer-logo.png) no-repeat
+			width: 128px
+			height: 24px
+			margin-left: 110px
+			@media (max-width: $phone-max)
+				margin: 0
+				margin-top: 30px
+				padding: 0
+				flex-shrink: 0
+
+		&__social
+			margin: 0 auto
+			img
+				padding-right: 15px
+		&__html
+			margin-right: 110px
+			@media (max-width: $phone-max)
+				margin: 0
+				width: 100%
+				padding: 0 20px
+				margin-bottom: 20px
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+	@media (max-width: $phone-max)
+		margin: 0
+
+	&__contacts
+		display: flex
+		align-items: center
+		justify-content: space-between
+		background-color: white
+		height: 201px
+		width: 570px
+		z-index: 3
+
+		@media (max-width: $tablet-max)
+			width: 90%
+			margin: 0 auto
+			h2
+				flex-basis: 50%
+				margin: 0
+				padding: 0
+			p
+				flex-basis: 50%
+
+	
+		h2
+			width: 154px
+			margin-right: 95px
+			font-size: 20px
+			font-weight: 400
+			text-transform: uppercase
+
+			@media (max-width: $phone-max)
+				margin-right: 10px
+
+		p
+			font-size: 16px
+			font-weight: 400
+			color: #444444
+
+		@media (max-width: $phone-max)
+
+			margin: 0 auto
+			//padding: 0 10px
+			width: 90%
+			height: 114px
+			h2
+				width: 50%
+				font-size: 16px
+				font-weight: 400
+				line-height: 20px
+				text-transform: uppercase
+			p
+				width: 50%
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+
+
+		@media (min-width: 992px)
+			padding: 0 70px
+			position: absolute
+			top: 100px
+			left: 100px
+			width: 570px
+
+
+
+			h2
+				font-weight: 400
+				line-height: 20px
+				text-transform: uppercase
+			p
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+	
+
+
+
+section
+	//padding: 0 15px
+
+
+@media (min-width: 575.98px)
+	section 
+		//padding: 0 calc(50% - 270px)
+
+@media (min-width: 992px)
+	section 
+		//padding: 0 calc(50% - 360px)
+
+
+@media (min-width: 991.98px) 
+	section 
+		//padding: 0 calc(50% - 480px)
+  
+@media (min-width: 1199.98px)
+	section 
+		//padding: 0 calc(50% - 590px)
+  
+
+
+
+
+// Экстрамалые девайсы («телефоны», < 576px)
+@media (max-width: 575.98px)
+
+// Малые девайсы («ландшафтные», < 992px)
+@media (max-width: 992px)
+
+// Средние девайсы («таблетки», < 992px) 
+@media (max-width: 991.98px)
+
+// Большие девайсы (большие десктопы, < 1200px)
+@media (max-width: 1199.98px)
+
+
+
+
+// Экстрамалые девайсы («портретные телефоны», < 576px)
+@media (max-width: 575.98px)
+
+// Малые девайсы («ландшафтные», >= 575px)
+@media (min-width: 576px) and (max-width: 992px)
+
+// Средние девайсы («таблетки», >= 992px) 
+@media (min-width: 992px) and (max-width: 991.98px)
+
+// Большие девайсы (большие десктопы, >= 992px)
+@media (min-width: 992px) and (max-width: 1199.98px)
+
+// Большие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px)
+
+
+
